@@ -1,7 +1,12 @@
 package com.bridgelabz.fellowshipprogram.junit;
 
 import com.bridgelabz.fellowshipprogram.utility.Utility;
-
+/**
+ * Purpose : To calculate the minimum number of notes as well as the notes to be returned by the vending machine
+ * @author : Priya Nagare
+ * @Date : 04 Dec 2019
+ *
+ */
 public class Vendingmachine {
 
 	public static void main(String[] args) {

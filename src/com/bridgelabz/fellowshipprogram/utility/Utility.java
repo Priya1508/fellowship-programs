@@ -390,4 +390,67 @@ public class Utility {
 		}
 	}
 	
+	public static void dayOfWeek(int d,int m,int y)
+	{
+		if((d>0 || d<32) && (m>0 || m<13))
+		{
+			int y1=y-(14-m)/12;
+			int x=y1+y1/4-y1/100+y1/400;
+			int m1=m+12*((14-m)/12)-2;
+			int d1=(d+x+(31*m1)/12)%7;
+			
+			switch(d1)
+			{
+			case 0:
+				System.out.println("It's Sunday");
+				break;
+			case 1:
+				System.out.println("It's Monday");
+				break;
+			case 2:
+				System.out.println("It's Tuesday");
+				break;
+			case 3:
+				System.out.println("It's Wednesday");
+				break;
+			case 4:
+				System.out.println("It's Thursday");
+				break;
+			case 5:
+				System.out.println("It's Friday");
+				break;
+			case 6:
+				System.out.println("It's Saturday");
+				break;
+			}
+		}
+		else
+		{
+			System.out.println("Enter valid date/month");
+		}
+	}
+	
+	public static double monthlyPayment(double P,double R,double Y)
+	{
+		double n=12*Y;
+		double r=R/(12*100);
+		double payment=(P*r)/(1-Math.pow(1+r, -n));
+		return payment;
+	}
+	
+	public static void toBinary(int n)
+	{
+		int i=0;
+		int binary[]=new int[100];
+		while(n>0)
+		{
+			binary[i++]=n%2;
+			n=n/2;
+		}
+		for(int j=i-1;j>=0;j--)
+		{
+			System.out.print(binary[j]+" ");
+		}
+	}
+	
 }

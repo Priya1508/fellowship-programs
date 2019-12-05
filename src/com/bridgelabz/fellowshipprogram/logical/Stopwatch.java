@@ -2,7 +2,7 @@ package com.bridgelabz.fellowshipprogram.logical;
 
 import com.bridgelabz.fellowshipprogram.utility.Utility;
 /**
- * Purpose : Stopwatch program  for measuring the time that elapses between the start and end clicks
+ * Purpose : Stop watch program  for measuring the time that elapses between the start and end clicks
  * @author : Priya Nagare
  * @Date : 30 Nov 2019
  *

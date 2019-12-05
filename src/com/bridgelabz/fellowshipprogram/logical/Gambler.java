@@ -1,7 +1,12 @@
 package com.bridgelabz.fellowshipprogram.logical;
 
 import com.bridgelabz.fellowshipprogram.utility.Utility;
-
+/**
+ * Purpose : Simulate a gambler who takes stake and bets until broke/win.Print number of wins and percentage of win and liss
+ * @author : Priya Nagare
+ * @Date : 30 Dec 2019
+ *
+ */
 public class Gambler {
 
 	public static void main(String[] args) {
