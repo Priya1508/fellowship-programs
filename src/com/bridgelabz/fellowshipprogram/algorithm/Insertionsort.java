@@ -1,16 +1,19 @@
 package com.bridgelabz.fellowshipprogram.algorithm;
-
 import com.bridgelabz.fellowshipprogram.utility.Utility;
 
-public class Insertionsort {
-
-	public static void main(String[] args) {
+/**
+ * Purpose : To sort the given array using insertion sort
+ * @author : Priya Nagare
+ * @Date : 02 Nov 2019
+ *
+ */
+public class Insertionsort
+{
+	public static void main(String[] args)
+	{
 		String str[]= {"E","A","C","D","B"};
-		int i=0;
-		
+		int i=0;	
 		System.out.println("Sorted array is: ");
 		Utility.insertionSort(str, i);
-
 	}
-
 }

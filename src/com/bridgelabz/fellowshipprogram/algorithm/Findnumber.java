@@ -1,10 +1,16 @@
 package com.bridgelabz.fellowshipprogram.algorithm;
-
 import com.bridgelabz.fellowshipprogram.utility.Utility;
 
-public class Findnumber {
-
-	public static void main(String[] args) {
+/**
+ * Purpose : Input number N  and then recursively ask true/false if the number is between a high and a low value and print the final answer
+ * @author : Priya Nagare
+ * @Date : 03 Nov 2019
+ *
+ */
+public class Findnumber 
+{
+	public static void main(String[] args)
+	{
 		int low=0,high=100,mid;
 		while(low<high)
 		{
@@ -22,7 +28,5 @@ public class Findnumber {
 			}
 		}
 		System.out.println("Guess number is "+low);
-
 	}
-
 }

@@ -1,5 +1,4 @@
 package com.bridgelabz.fellowshipprogram.utility;
-
 import java.util.Scanner;
 /**
  * 
@@ -9,7 +8,6 @@ import java.util.Scanner;
  */
 public class Utility {
 	//Creation of scanner object
-	
 	static Scanner sc=new Scanner(System.in);
 	
 	/**
@@ -104,8 +102,6 @@ public class Utility {
 			{
 				tail++;
 			}
-		
-		
 		headres=(head/num)*100;
 		tailres=(tail/num)*100;
 		}
@@ -126,7 +122,6 @@ public class Utility {
 		{
 			System.out.println("Enter valid year");
 		}
-		
 		if(year%400==0 || year%4==0 && year%100!=0) 
 		{
 			return true;
@@ -291,7 +286,6 @@ public class Utility {
 	 */
 	public static void couponNumber(long arr[])
 	{
-
 		for(int i=0;i<arr.length;i++) 
 		{
 			arr[i]=(int)(Math.random()*1000000000+1000000000);
@@ -303,7 +297,9 @@ public class Utility {
 	}
 	
 	/**
-	 * @return 
+	 * Purpose : To calculate the minimum number of notes as well as the notes to be returned by the vending machine
+	 * @param : Pass amount as argument
+	 * @return Return the minimum number notes and notes to be returned 
 	 * 
 	 */
 	public static void vendingMachine(int notes[],int amount,int value,int total)
@@ -313,13 +309,21 @@ public class Utility {
 			total=amount/notes[i];
 			if(total!=0) 
 			{
-				System.out.println(total+" "+notes[i]);
-				
+				System.out.println(total+" "+notes[i]);			
 			}
 			amount=amount%notes[i];
 		}
 	}
 	
+	/**
+	 * purpose : To check whether the given key string is present in the array or not
+	 * @param  Pass the arguments in the array str 
+	 * @param key string argument is passed
+	 * @param first gives the initial position of string
+	 * @param last gives the end position of string
+	 * @param mid gives the middle of the string
+	 * @return whether the key string is present or not
+	 */
 	public static void binarySearch(String str[],String key,int first,int last,int mid)
 	{
 		mid=(first+last)/2;
@@ -346,6 +350,11 @@ public class Utility {
 		}
 	}
 	
+	/**
+	 * Purpose : To sort the given array using insertion sort
+	 * @param Array arguments is passes in string str
+	 * @return The sorted array
+	 */
 	public static void insertionSort(String str[],int i)
 	{
 		String temp;
@@ -369,6 +378,11 @@ public class Utility {
 		}
 	}
 	
+	/**
+	 * Purpose : To sort the given array using bubble sort
+	 * @param Pass the array elements in arr
+	 * @return The sorted array
+	 */
 	public static void bubbleSort(int arr[],int i,int j)
 	{
 		int temp;
@@ -390,6 +404,13 @@ public class Utility {
 		}
 	}
 	
+	/**
+	 * Purpose : To pass an argument date and give the output of the day of that date
+	 * @param Pass argument date in d
+	 * @param Pass argument month in m 
+	 * @param pass argument year in y
+	 * @return The day of the date passed
+	 */
 	public static void dayOfWeek(int d,int m,int y)
 	{
 		if((d>0 || d<32) && (m>0 || m<13))
@@ -398,7 +419,6 @@ public class Utility {
 			int x=y1+y1/4-y1/100+y1/400;
 			int m1=m+12*((14-m)/12)-2;
 			int d1=(d+x+(31*m1)/12)%7;
-			
 			switch(d1)
 			{
 			case 0:
@@ -430,6 +450,13 @@ public class Utility {
 		}
 	}
 	
+	/**
+	 * Pupose : To calculate the monthly payment of the principal amount to at a specific rate of interest for a specified year
+	 * @param Pass argument of principal amount in P
+	 * @param Pass the argument of rate of interest in R
+	 * @param Pass the argument of number of year in Y
+	 * @return To return the monthly payment the person has to make
+	 */
 	public static double monthlyPayment(double P,double R,double Y)
 	{
 		double n=12*Y;
@@ -438,6 +465,10 @@ public class Utility {
 		return payment;
 	}
 	
+	/**
+	 * 
+	 * @param n
+	 */
 	public static void toBinary(int n)
 	{
 		int i=0;
@@ -453,4 +484,51 @@ public class Utility {
 		}
 	}
 	
+	/**
+	 * @return 
+	 * 
+	 */
+	public static int swapNibbles(String binary, int n)
+	{
+		return (((n & 0x0F)<<4) | ((n & 0xF0)>>4));
+	}
+	
+	/**
+	 * 
+	 */
+	public static void ispowerOfTwo(int n1)
+	{
+		while(n1!=0)
+		{
+			if(n1%2==0)
+			{
+				System.out.println("The resultant number is power of two");
+				break;
+			}
+			else
+			{
+				System.out.println("The resultant is not power of two");
+				break;
+			}
+		}
+	}
+	/**
+	 * 
+	 */
+	public static void quadratic(double a,double b,double c) 
+	{
+		double delta=(b*b)-(4*a*c);
+		if(delta>0) 
+		{
+			double root1=(-b+Math.sqrt(delta))/(2*a);
+			double root2=(-b-Math.sqrt(delta))/(2*a);
+			System.out.println("First root is: "+root1);
+			System.out.println("Second root is :"+root2);
+		}
+		else 
+		{
+			System.out.println("Roots are imaginary");
+		}
+	}
 }
+	
