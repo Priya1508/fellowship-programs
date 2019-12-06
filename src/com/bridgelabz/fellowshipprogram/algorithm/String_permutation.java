@@ -16,7 +16,7 @@ public class String_permutation
 		String_permutation permutation=new String_permutation();
 		permutation.permute(str,0,n-1);
 	}
-	private void permute(String str, int first, int last)
+	public void permute(String str, int first, int last)
 	{
 		if(first==last)
 		{
@@ -32,7 +32,7 @@ public class String_permutation
 			}
 		}
 	}
-	private String swap(String a, int i, int j)
+	public String swap(String a, int i, int j)
 	{
 		char temp;	
 		char[] charArray=a.toCharArray();
