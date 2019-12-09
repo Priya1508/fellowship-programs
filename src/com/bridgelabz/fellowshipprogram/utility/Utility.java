@@ -858,7 +858,7 @@ public class Utility {
 	 */
 	public static void merge(String str[],int low,int mid,int high)
 	{
-		//find the size the two subarrays
+		//find the size the two sub-arrays
 		int l=mid-low+1;
 		int r=high-mid;
 		//create temp arrays
@@ -869,9 +869,9 @@ public class Utility {
 			LeftArray[i]=str[low+i];
 		for(int j=0;j<r;j++)
 			RightArray[j]=str[mid+1+j];
-		//Initialize the indexes of first and second subarrays
+		//Initialize the indexes of first and second sub-arrays
 		int i=0,j=0;
-		//Initial index of merged subarray
+		//Initial index of merged sub-array
 		int k=low;
 		while(i<l && j<r)
 		{

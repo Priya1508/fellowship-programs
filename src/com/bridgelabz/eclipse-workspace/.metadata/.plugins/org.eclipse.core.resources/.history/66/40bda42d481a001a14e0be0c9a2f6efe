@@ -1,0 +1,18 @@
+package com.bridgelabz.data_structures.data_structs;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Unorderedlist 
+{
+	public static void main(String[] args) throws IOException 
+	{
+		FileWriter fw=new FileWriter("unorderedlist.txt");
+		BufferedWriter bw=new BufferedWriter(fw);
+		//char[] ch= {'e','d','b','c','a'};
+		bw.write("abc");
+		bw.flush();
+		bw.close();
+	}
+}

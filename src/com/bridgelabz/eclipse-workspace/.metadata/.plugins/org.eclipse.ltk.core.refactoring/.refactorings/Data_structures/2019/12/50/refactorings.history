@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;Data_structures&apos;&#x0A;- Original project: &apos;Data_structures&apos;&#x0A;- Original element: &apos;Data_structures/src/com.bridgelabz.data_structures.utility&apos;" description="Delete element" element1="/src&lt;com.bridgelabz.data_structures.utility" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1575865338674" subPackages="false" version="1.0"/>
+</session>

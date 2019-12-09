@@ -1,0 +1,15 @@
+package com.bridgelabz.fellowshipprogram.junit;
+import com.bridgelabz.fellowshipprogram.utility.Utility;
+public class Binary
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Enter a decimal number: ");
+		int n=Utility.inputInteger();
+		System.out.println("Binary number is: ");
+		Utility.toBinary((int) n);
+		String binary = null;
+		int n1=Utility.swapNibbles(binary, n);
+		System.out.println("After swapping nibbles: "+n1);
+	}
+}

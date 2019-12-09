@@ -1,0 +1,11 @@
+package com.bridgelabz.ds.utility;
+
+public class Utility
+{
+	public static <T> T push(T elements)
+	{
+		Node<T> temp=new Node<T>(elements);
+		
+	}
+
+}

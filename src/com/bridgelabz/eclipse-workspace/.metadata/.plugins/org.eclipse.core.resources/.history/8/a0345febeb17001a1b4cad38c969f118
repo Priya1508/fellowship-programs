@@ -1,0 +1,10 @@
+package com.bridgelabz.fellowshipprogram.junit;
+
+public class Square_root {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

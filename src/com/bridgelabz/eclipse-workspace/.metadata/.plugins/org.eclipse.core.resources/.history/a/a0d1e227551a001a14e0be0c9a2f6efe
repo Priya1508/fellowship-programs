@@ -1,0 +1,155 @@
+package com.bridgelabz.ds.utility;
+
+import java.util.NoSuchElementException;
+
+public class Utility
+{
+	public static Node top=null;
+	public static Node front=null;
+	public static Node rear=null;
+	public static Node head=null;
+	
+	static int size=0;
+	
+	public static <T> T push(T element)
+	{
+		Node temp=new Node();
+		temp.next=top;
+		top=temp;
+		return(T)temp.data;
+		
+	}
+	
+	public static<T> T pop()
+	{
+		if(top==null)
+		{
+			throw new NoSuchElementException("Stack is empty");
+		}
+		T temp=(T)top.data;
+		top=top.next;
+		return temp;
+	}
+	
+	public static<T> T peek()
+	{
+		if(top==null)
+		{
+			throw new NoSuchElementException("Stack is empty");
+		}
+		System.out.println("Element is "+top.data);
+		return (T)top.data;
+	}
+	
+	public static boolean isEmpty()
+	{
+		return top==null;
+	}
+	
+	public static<T>T display()
+	{
+		Node temp=top;
+		while(top!=null)
+		{
+			System.out.println(" "+temp.data);
+			temp=temp.next;
+		}
+		System.out.println();
+		return null;
+	}
+	
+	public static<T> void size()
+	{
+		int count=0;
+		Node temp=top;
+		while(top!=null)
+		{
+			count++;
+			temp=temp.next;
+		}
+		System.out.println("Size of stack: "+count);
+	}
+	
+	public static boolean list()
+	{
+		return head==null;
+	}
+	
+	public static  void add(String item)
+	{
+		Node node=new Node();
+		node.data=item;
+		node.next=null;
+		
+		if(head==null)
+		{
+			head=node;
+		}
+		else
+		{
+			Node temp = head;
+			while(temp.next!=null)
+			{
+				 temp= temp.next;
+			}
+			temp.next=node;
+		}
+	}
+	
+	public static void remove(String item)
+	{
+		Node temp=head;
+		if(head==null)
+		{
+			System.out.println("List is empty");
+		}
+		else
+		{
+			while(temp.item!=item)
+			{
+				temp=temp.next;
+			}
+			temp=temp.next.next;
+		}
+	}
+	
+	public static void search(String item)
+	{
+		Node temp = head;
+		if(head==null)
+		{
+			System.out.println("List is empty");
+		}
+		else
+		{
+			while(temp.item!=item)
+			{
+				temp=temp.next;
+			}
+			System.out.println("Search element found "+item);
+		}
+	}
+	
+	public static int index(String item)
+	{
+		
+		int index=0;
+		Node temp=head;
+		if(temp==null)
+		{
+			return -1;
+		}
+		else
+		{
+			while(temp.data!=item)
+			{
+				
+				index=index+1;
+				temp=temp.next;
+			}
+			return index;
+		}
+	   
+	}
+
+}

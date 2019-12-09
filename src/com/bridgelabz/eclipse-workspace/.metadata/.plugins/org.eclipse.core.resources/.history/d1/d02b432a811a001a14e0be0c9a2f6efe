@@ -1,0 +1,71 @@
+package com.bridgelabz.data_structures.data_structs;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+import com.bridgelabz.ds.utility.Utility1;
+
+public class Orderedlist {
+
+	public static void main(String[] args) throws IOException {
+		Utility1 list=new Utility1();
+		FileReader fr=new FileReader("/home/admin1/eclipse-workspace/Data_structures/src/ordered.txt");
+		BufferedReader br=new BufferedReader(fr);
+		String str;
+		String s="";
+		//String[] array=new String[a];
+		//int arr[]=new int[array.length];
+	
+		while((str=br.readLine())!=null)
+		{
+			s=str;
+		}
+		String[] arr=s.split(" ");
+		int[] arr2=new int[arr.length];
+		//array=a.split(" ");
+		for(int i=0;i<arr.length;i++)
+		{
+			arr2[i]=Integer.parseInt(arr[i]);
+		}
+		
+		System.out.println(Arrays.toString(arr2));
+		list.bubbleSort(arr2, 0, 0);
+		for(int i : arr2)
+		{
+			//adding element to linked list
+			list.insert(i);
+		}
+		System.out.println();
+		list.display();
+		System.out.println();
+		Scanner scan=new Scanner(System.in);
+		int sc=scan.nextInt();
+		boolean bool=list.search(sc);
+		if(bool)
+		{
+			list.pop(sc);
+		}
+		else
+		{
+			list.add(sc);
+		}
+		String m="";
+		for(int i=0;i<list.size();i++)
+		{
+			String x=Integer.toString(list.indexOf(i));
+			m=m+x;
+			m=m+" ";
+		}
+		list.display();
+		BufferedWriter bw=new BufferedWriter(new FileWriter("/home/admin1/eclipse-workspace/Data_structures/src/ordered.txt"));
+		bw.write(m+" ");
+		bw.close();
+
+	}
+
+}

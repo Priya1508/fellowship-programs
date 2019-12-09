@@ -1,0 +1,55 @@
+package com.bridgelabz.fellowshipprogram.algorithm;
+
+import com.bridgelabz.fellowshipprogram.utility.Utility;
+
+public class Prime_pali_ana {
+
+	public static void main(String[] args) {
+		System.out.println("Enter a number");
+		int n=Utility.inputInteger();
+		isPrime(n);
+		isPalindrome(n);
+
+	}
+
+	public static void isPalindrome(int n) {
+		int originalnumber=n,rev=0,rem;
+		while(n>0)
+		{
+			rem=n%10;
+			rev=rev*10+rem;
+			n=n/10;
+		}
+		if(originalnumber==rev)
+		{
+			System.out.println("Number is prime palindrome");
+		}
+		else
+		{
+			System.out.println("Number is not prime palindrome");
+		}
+		
+	}
+
+	public static void isPrime(int n) {
+		int prime=0;
+		for(int i=2;i<n;i++)
+		{
+			if(n%i==0)
+			{
+				prime=1;
+				break;
+			}
+		}
+		if(prime==0)
+		{
+			System.out.println("Number is prime");
+		}
+		else
+		{
+			System.out.println("Number is not prime");
+		}
+		
+	}
+
+}
