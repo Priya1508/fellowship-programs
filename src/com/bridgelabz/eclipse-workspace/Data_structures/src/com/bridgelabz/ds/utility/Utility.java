@@ -10,7 +10,8 @@ public class Utility
 	public static Node head=null;
 	
 	static int size=0;
-	//To push the element in the stack
+	//FOR UNORDERED LIST
+	//To push the element in the list
 	public static <T> T push(T element)
 	{
 		Node temp=new Node();
@@ -18,12 +19,12 @@ public class Utility
 		top=temp;
 		return(T)temp.data;
 	}
-	//To remove the element from the stack
+	//To remove the element from the list
 	public static<T> T pop()
 	{
 		if(top==null)
 		{
-			throw new NoSuchElementException("Stack is empty");
+			throw new NoSuchElementException("List is empty");
 		}
 		T temp=(T)top.data;
 		top=top.next;
@@ -34,12 +35,12 @@ public class Utility
 	{
 		if(top==null)
 		{
-			throw new NoSuchElementException("Stack is empty");
+			throw new NoSuchElementException("List is empty");
 		}
 		System.out.println("Element is "+top.data);
 		return (T)top.data;
 	}
-	//To check if the the stack is empty
+	//To check if the the List is empty
 	public static boolean isEmpty()
 	{
 		return top==null;
@@ -157,5 +158,125 @@ public class Utility
 		}
 		return "";
 	}
-
+	
+	//FOR STACK
+	public static int top1=-1;
+	public static int stack=0;
+	public static int first=0;
+	static int size1=0;
+	
+	public static boolean stack(int data)
+	{
+		return first==0;
+	}
+	//To retrieve the data where the top is pointing
+	public static boolean peek1()
+	{
+			return stack(top1);
+	}
+	//To check if the stack is full
+	public static boolean isFull()
+	{
+		int MAXSIZE=100;
+		if(top1==MAXSIZE)
+		{
+			System.out.println("Stack overflow");
+		}
+		else
+		{
+			return false;
+		}	
+		return false;
+	}
+	//To check if the stack is empty
+	public static boolean isEmpty1()
+	{
+		if(top1==-1)
+		{
+			System.out.println("Stack is empty");
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	//To push(insert) elements in stack
+	public static void push1(char ch)
+	{
+		if(!isFull())
+		{
+			top1=top1+1;
+			char a=ch;
+		}
+		else
+		{
+			System.out.println("stack overflow");
+		}
+	}
+	//To pop (access) element for the stack
+	public static void pop1()
+	{
+		if(!isEmpty1())
+		{
+			top1=top1-1;
+		}
+		else
+		{
+			System.out.println("Stack is empty");
+		}
+	}
+	//FOR QUEUE
+	public static int front1=0;
+	public static int rear1=0;
+	static int size2=0;
+	
+	public static boolean isFull1()
+	{
+		int MAXSIZE=100;
+		if(rear1==MAXSIZE)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public static boolean isEmpty2()
+	{
+		if(front1<0 || front1>rear1)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public static void enqueue(int count)
+	{
+		if(isEmpty2())
+		{
+			rear1=rear1+1;
+		}
+		else
+		{
+			System.out.println("Queue overflow");
+		}
+	}
+	
+	public static void dequeue()
+	{
+		if(isEmpty2())
+		{
+			System.out.println("Queue underflow");
+		}
+		else
+		{
+			front1=front1+1;
+		}
+	}
 }
