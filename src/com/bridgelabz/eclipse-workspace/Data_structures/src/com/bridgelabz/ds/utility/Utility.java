@@ -1,6 +1,10 @@
 package com.bridgelabz.ds.utility;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Set;
 
 public class Utility
 {
@@ -255,7 +259,7 @@ public class Utility
 			return false;
 		}
 	}
-	
+	//To insert the elements in queue
 	public static void enqueue(int count)
 	{
 		if(isEmpty2())
@@ -267,7 +271,7 @@ public class Utility
 			System.out.println("Queue overflow");
 		}
 	}
-	
+	//To remove the elements from the queue
 	public static void dequeue()
 	{
 		if(isEmpty2())
@@ -279,4 +283,97 @@ public class Utility
 			front1=front1+1;
 		}
 	}
+	//FOR DEQUEUE
+	public static String front2=null;
+	public static String rear2=null;
+	static int size3=0;
+	
+	public static boolean isEmpty3()
+	{
+		if(front2.compareTo(rear2)<0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public static boolean isFull2()
+	{
+		String[] MAXSIZE=new String[100];
+		if(rear2.equals(MAXSIZE))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	static ArrayList<String> list=new ArrayList<String>();
+	
+	public static void addRear(String item) 
+	{
+		list.add(item);
+	}
+	
+	public static void addFront(String item)
+	{
+		list.add(0,item);
+	}
+	
+	public static void removeRear()
+	{
+		if(list.isEmpty())
+		{
+			System.out.println("Unable to remove");
+		}
+		else
+		{
+			list.remove(list.size()-1);
+		}
+	}
+	
+	public static void removeFront()
+	{
+		if(list.isEmpty())
+		{
+			System.out.println("Unable to remove");
+		}
+		else
+		{
+			list.remove(0);
+		}
+	}
+	
+	public String peekFront()
+	{
+		String item=list.get(0);
+		return item;
+	}
+	
+	public String peekRear()
+	{
+		String item=list.get(list.size()-1);
+		return item;
+	}
+	
+	//TO PRINT PRIME NUMBERS IN ARRAY 2D
+	public static int isPrime(int n)
+	{
+		int cnt=0;
+		for(int i=2;i<n/2;i++)
+		{
+			if(n%i==0)
+			{
+				cnt++;
+				break;
+			}
+		}
+		return cnt;
+	}
+	
 }

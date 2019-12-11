@@ -2,16 +2,24 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogram.logical.Tictactoe"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.Utility"/>
     <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogram.algorithm.String_permutation"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogram.algorithm.Merge_sort"/>
     <fullyQualifiedTypeName name="com.bridgelabz.fellowshipprogram.utility.Utility"/>
-    <fullyQualifiedTypeName name="java.io.FileWriter"/>
-    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
     <fullyQualifiedTypeName name="Node.Node.ListNode"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.ds.utility.Node"/>
+    <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.ds.utility.Utility1"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.data_structures.data_structs.Orderedlist"/>
+    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.ds.utility.Utility"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
