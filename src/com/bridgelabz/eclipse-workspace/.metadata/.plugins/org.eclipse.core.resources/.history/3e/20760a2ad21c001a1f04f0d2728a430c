@@ -1,0 +1,50 @@
+package com.bridgelabz.fellowshipprogram.dsutility;
+
+import Node.Node.ListNode;
+
+public class Dsutility
+{
+	public void display(ListNode<T> head)
+	{
+		if(head==null)
+		{
+			return;
+		}
+		ListNode<T> current=head;
+		while(current!=null)
+		{
+			System.out.print(current.data+" ");
+			current=current.next;
+		}
+		System.out.println(current);
+	}
+	
+	public ListNode<T> insertAtBeginning(ListNode<T> head,T data)
+	{
+		ListNode<T> newNode=new ListNode<T>(data);
+		if(head==null)
+		{
+			return newNode;
+		}
+		newNode.next=head;
+		head=newNode;
+		return head;	
+	}
+	
+	public ListNode<T> insertAtEnd(ListNode<T> head,T data)
+	{
+		ListNode<T> newNode=new ListNode<T>(data);
+		if(head==null)
+		{
+			return newNode;
+		}
+		ListNode<T> current=head;
+		while(null!=current.next)
+		{
+			current=current.next;
+		}
+		current.next=newNode;
+		return head;
+	}
+
+}

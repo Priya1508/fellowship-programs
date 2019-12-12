@@ -1,4 +1,5 @@
 package com.bridgelabz.data_structures.data_structs;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import com.bridgelabz.ds.utility.Utility;
 
@@ -9,7 +10,9 @@ public class BankingCashCounter
 		Utility u=new Utility();
 		int count=0;
 		int cash_count=100000;
-		label:
+		
+		try {
+			label:
 			do
 			{
 				Scanner sc=new Scanner(System.in);
@@ -69,5 +72,10 @@ public class BankingCashCounter
 				}
 			}while(cash_count!=0);
 		System.out.println("Out of cash");
+	}
+		catch (InputMismatchException e)
+		{
+			System.out.println("Enter valid number");
+		}
 	}
 }

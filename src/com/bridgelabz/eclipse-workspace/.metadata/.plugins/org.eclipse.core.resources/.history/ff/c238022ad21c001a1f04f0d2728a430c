@@ -1,0 +1,10 @@
+package com.bridgelabz.fellowshipprogram.basic;
+
+public class Replace_string {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
