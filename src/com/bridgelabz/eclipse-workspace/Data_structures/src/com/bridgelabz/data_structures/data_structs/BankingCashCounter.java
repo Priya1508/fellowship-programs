@@ -21,9 +21,11 @@ public class BankingCashCounter
 				System.out.println("Enter 2 to show the available");
 				System.out.println("Enter 3 to exit");
 				int choice=sc.nextInt();
+				//To run the specific choice the user has inserted
 				switch(choice)
 				{
 				case 1:
+					//Enqueue is used to insert elements in queue
 					u.enqueue(count++);
 					System.out.println("Adding "+count+" person to the queue");
 					System.out.println("Enter 1 to deposit");
@@ -59,6 +61,7 @@ public class BankingCashCounter
 						System.out.println("Ivalid choice");
 						break;
 					}
+					//Dequeue is used to remove the elements from the queue
 					u.dequeue();
 					System.out.println("Person removed");
 					break;

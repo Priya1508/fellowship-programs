@@ -6,13 +6,14 @@ public class BalancedParentheses
 	public static void main(String[] args)
 	{
 		Utility u = new Utility();
-		String str = "()}{[";
+		String str = ")))))((";
 		char ch = 0;
 		for (int i = 0; i < str.length(); i++)
 		{
 			ch = str.charAt(i);
 			if (ch == '(' || ch=='{' || ch=='[') 
 			{
+				//To insert the element
 				u.push1(ch);
 			}
 		}
@@ -23,6 +24,7 @@ public class BalancedParentheses
 			{
 				if(u.isEmpty1()==false)
 				{
+					//To remove the element
 					u.pop1();
 				}
 				else
@@ -31,13 +33,14 @@ public class BalancedParentheses
 				}
 			}
 		}
+		//If the stack is empty then the parentheses are balanced
 			if(u.isEmpty1()==true)
 			{
-				System.out.println("balanced");
+				System.out.println("Balanced parentheses");
 			}
 			else
 			{
-				System.out.println("Not balanced");
+				System.out.println("Parentheses not balanced");
 			}
 	}
 }

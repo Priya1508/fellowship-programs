@@ -29,7 +29,8 @@ public class Orderedlist {
 		{
 			s=str;
 		}
-		String[] arr=s.split(" ");//To split the array
+		//To split the array
+		String[] arr=s.split(" ");
 		int[] arr2=new int[arr.length];
 		for(int i=0;i<arr.length;i++)
 		{
@@ -37,7 +38,8 @@ public class Orderedlist {
 		}
 		
 		System.out.println(Arrays.toString(arr2));
-		list.bubbleSort(arr2, 0, 0);//sorting of the elements
+		//sorting of the elements
+		list.bubbleSort(arr2, 0, 0);
 		for(int i : arr2)
 		{
 			//adding element to linked list
@@ -66,6 +68,7 @@ public class Orderedlist {
 			m=m+" ";
 		}
 		list.display();
+		//To write the data on the file
 		BufferedWriter bw=new BufferedWriter(new FileWriter("/home/admin1/eclipse-workspace/Data_structures/src/ordered.txt"));
 		bw.write(m+" ");
 		bw.close();
