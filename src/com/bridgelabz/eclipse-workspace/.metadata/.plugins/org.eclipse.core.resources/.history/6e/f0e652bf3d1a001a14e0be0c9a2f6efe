@@ -1,7 +1,0 @@
-package com.bridgelabz.ds.utility;
-
-public class Node {
-	public T data;
-	public Node next;	
-
-}
